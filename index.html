@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post entry to link blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <form method="GET">
+        <input type="url" id="blog-url">
+        <input type="password" id="blog-password" name="p">
+        <hr>
+        <input type="text" id="description" name="t" autofocus>
+        <input type="url" id="link" name="l">
+        <button type="submit">Post</button>
+    </form>
+    <iframe id="blog"></iframe>
+    <script src="app.js"></script>
+</body>
+</html>
