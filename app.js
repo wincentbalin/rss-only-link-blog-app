@@ -1,5 +1,7 @@
+var localStorageAvailable = 'localStorage' in window;
+
 function saveBlogUrlAndPassword() {
-    if (!('localStorage' in window)) {
+    if (!localStorageAvailable) {
         alert('Your browser does not support saving blog parameters!');
         return;
     }
@@ -9,7 +11,7 @@ function saveBlogUrlAndPassword() {
 }
 
 function loadBlogUrlAndPassword() {
-    if (!('localStorage' in window)) {
+    if (!localStorageAvailable) {
         alert('Your browser does not support loading blog parameters!');
         return;
     }
