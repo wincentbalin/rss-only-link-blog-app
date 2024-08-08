@@ -35,5 +35,5 @@ document.querySelector('form').addEventListener('submit', (event) => {
         alert('The page uses insecure connection!\nPlease use an address starting with https://');
         return false;
     }
-    // TODO: Save URL and password 
+    saveBlogUrlAndPassword();
 });
