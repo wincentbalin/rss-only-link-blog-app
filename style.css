@@ -1,15 +1,15 @@
 body {
     margin: 0 auto;
-    max-width: 40rem;
+    max-width: 40rem
 }
 
 body form *,
 body iframe {
     width: 100%;
     margin: 0.5ex 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 iframe {
-    border: 0;
+    border: 0
 }
