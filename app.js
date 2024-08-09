@@ -45,3 +45,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
     }
     saveBlogUrlAndPasswordAfterSettingBlogURL();
 });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    loadBlogUrlAndPassword();
+});
