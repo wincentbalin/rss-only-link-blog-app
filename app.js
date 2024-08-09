@@ -1,5 +1,11 @@
 var localStorageAvailable = 'localStorage' in window;
 
+function setBlogUrl() {
+    var url = document.querySelector('#blog-url').value;
+    document.querySelector('form').setAttribute('action', url);
+    document.querySelector('#blog').setAttribute('src', url);
+}
+
 function saveBlogUrlAndPassword() {
     if (!localStorageAvailable) {
         alert('Your browser does not support saving blog parameters!');
@@ -20,17 +26,17 @@ function loadBlogUrlAndPassword() {
     document.querySelector('#blog-url').value = url ? url : '';
     var password = localStorage.blogPassword;
     document.querySelector('#blog-password').value = password ? password : '';
+
+    setBlogUrl();
 }
 
-function saveBlogUrlAndPasswordAfterSettingBlogURL(url) {
-    var url = document.querySelector('#blog-url').value;
-    document.querySelector('form').setAttribute('action', url);
-    document.querySelector('#blog').setAttribute('src', url);
+function saveBlogUrlAndPasswordAfterSettingBlogUrl() {
+    setBlogUrl();
     saveBlogUrlAndPassword();
 }
 
 document.querySelector('#blog-url').addEventListener('blur', (event) => {
-    saveBlogUrlAndPasswordAfterSettingBlogURL();
+    saveBlogUrlAndPasswordAfterSettingBlogUrl();
 });
 
 document.querySelector('#blog-password').addEventListener('blur', (event) => {
@@ -43,7 +49,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
         alert('The page uses insecure connection!\nPlease use an address starting with https://');
         return false;
     }
-    saveBlogUrlAndPasswordAfterSettingBlogURL();
+    saveBlogUrlAndPasswordAfterSettingBlogUrl();
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
