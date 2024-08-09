@@ -43,13 +43,16 @@ document.querySelector('#blog-password').addEventListener('blur', (event) => {
     saveBlogUrlAndPassword();
 });
 
+document.querySelector('form button').addEventListener('click', (event) => {
+    saveBlogUrlAndPasswordAfterSettingBlogUrl();
+});
+
 document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault();
     if (/^http:/.test(document.querySelector('form').action)) {
         alert('The page uses insecure connection!\nPlease use an address starting with https://');
         return false;
     }
-    saveBlogUrlAndPasswordAfterSettingBlogUrl();
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
