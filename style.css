@@ -9,3 +9,7 @@ body iframe {
     margin: 0.5ex 0;
     box-sizing: border-box;
 }
+
+iframe {
+    border: 0;
+}
