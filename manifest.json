@@ -1,0 +1,22 @@
+{
+    "name": "Save to RSS-only link blog",
+    "short_name": "Save link",
+    "icons": [{
+        "src": "/rss-only-link-blog-app/icon.svg",
+        "sizes": "192x192 512x512",
+        "type": "image/svg+xml"
+    }],
+    "url_handlers": [{
+        "origin": "https://wincentbalin.github.io/rss-only-link-blog-app/"
+    }],
+    "start_url": "/rss-only-link-blog-app/",
+    "share_target": {
+        "action": "/rss-only-link-blog-app/",
+        "method": "GET",
+        "params": {
+            "title": "title",
+            "url": "url"
+        }
+    },
+    "display": "standalone"
+}
