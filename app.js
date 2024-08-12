@@ -23,10 +23,8 @@ function loadBlogUrlAndPassword() {
         return;
     }
 
-    var url = localStorage.blogUrl;
-    document.querySelector('#blog-url').value = url ? url : '';
-    var password = localStorage.blogPassword;
-    document.querySelector('#blog-password').value = password ? password : '';
+    document.querySelector('#blog-url').value = localStorage.blogUrl || '';
+    document.querySelector('#blog-password').value = localStorage.blogPassword || '';
 
     setBlogUrl();
 }
