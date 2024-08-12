@@ -1,4 +1,4 @@
-var localStorageAvailable = 'localStorage' in window;
+var localStoragePresent = 'localStorage' in window;
 var searchParamsPresent = document.location.search.length > 0;
 
 function setBlogUrl() {
@@ -8,7 +8,7 @@ function setBlogUrl() {
 }
 
 function saveBlogUrlAndPassword() {
-    if (!localStorageAvailable) {
+    if (!localStoragePresent) {
         alert('Your browser does not support saving blog parameters!');
         return;
     }
@@ -18,7 +18,7 @@ function saveBlogUrlAndPassword() {
 }
 
 function loadBlogUrlAndPassword() {
-    if (!localStorageAvailable) {
+    if (!localStoragePresent) {
         alert('Your browser does not support loading blog parameters!');
         return;
     }
