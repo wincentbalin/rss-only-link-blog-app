@@ -1,4 +1,5 @@
 var localStorageAvailable = 'localStorage' in window;
+var searchParamsPresent = document.location.search.length > 0;
 
 function setBlogUrl() {
     var url = document.querySelector('#blog-url').value;
@@ -35,6 +36,12 @@ function saveBlogUrlAndPasswordAfterSettingBlogUrl() {
     saveBlogUrlAndPassword();
 }
 
+function loadShareTargetParams() {
+    var params = new URLSearchParams(document.location.search);
+    document.querySelector('#text').value = params.get('title') || '';
+    document.querySelector('#url').value = params.get('url') || '';
+}
+
 document.querySelector('#blog-url').addEventListener('blur', (event) => {
     saveBlogUrlAndPasswordAfterSettingBlogUrl();
 });
@@ -56,4 +63,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
 
 document.addEventListener('DOMContentLoaded', (event) => {
     loadBlogUrlAndPassword();
+    if (searchParamsPresent) {
+        loadShareTargetParams();
+    }
 });
