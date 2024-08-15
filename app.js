@@ -38,7 +38,7 @@ function loadShareTargetParams() {
     var params = new URLSearchParams(document.location.search);
     alert('Debug: ' + document.location.search);
     document.querySelector('#description').value = params.get('title') || '';
-    document.querySelector('#link').value = params.get('url') || '';
+    document.querySelector('#link').value = params.get('url') || params.get('text') || '';
 }
 
 document.querySelector('#blog-url').addEventListener('blur', (event) => {
