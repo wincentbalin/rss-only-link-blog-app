@@ -18,6 +18,7 @@
         "action": "/rss-only-link-blog-app/",
         "method": "GET",
         "params": {
+            "text": "text",
             "title": "title",
             "url": "url"
         }
