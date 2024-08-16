@@ -36,9 +36,7 @@ function saveBlogUrlAndPasswordAfterSettingBlogUrl() {
 
 function loadShareTargetParams() {
     var params = new URLSearchParams(document.location.search);
-    alert('Debug: ' + document.location.search);
     document.querySelector('#description').value = params.get('title') || '';
-    alert('URL: ' + (params.get('url') || params.get('text') || ''));
     document.querySelector('#link').value = params.get('url') || params.get('text') || '';
 }
 
