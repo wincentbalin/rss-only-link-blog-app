@@ -12,7 +12,8 @@ body iframe {
 }
 
 iframe {
-    border: 0
+    border: 0;
+    height: 300px
 }
 
 @media screen and (max-width: 640px) {
