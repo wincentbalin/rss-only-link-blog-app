@@ -72,6 +72,10 @@ document.querySelector('form').addEventListener('submit', (event) => {
     }
 });
 
+addEventListener('unload', (event) => {
+    // Trigger page reload at every access
+});
+
 document.addEventListener('DOMContentLoaded', (event) => {
     loadBlogUrlAndPassword();
     refreshBlog();
