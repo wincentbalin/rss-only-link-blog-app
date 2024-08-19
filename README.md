@@ -1,5 +1,17 @@
 # Authoring web app for RSS-only link blog
 
-This project should facilitate authoring of posts to the [RSS-only link blog](https://github.com/wincentbalin/rss-only-link-blog).
+This project facilitates authoring of posts to the [RSS-only link blog](https://github.com/wincentbalin/rss-only-link-blog).
 
-But, alas, as the article [Receiving shared data with the Web Share Target API](https://developer.chrome.com/docs/capabilities/web-apis/web-share-target) tells, the field `url` int the `share_target` object is always empty in Android. So this app will not work until [this bug](https://bugs.chromium.org/p/chromium/issues/detail?id=789379) is fixed.
+# Usage
+
+Simply copy all files to another server (adjust the paths and the app URL in `manifest.json` and `sw.js` in this case), or simply use the [default instance](https://wincentbalin.github.io/rss-only-link-blog-app/). Open the URL of the app instance and install it.
+
+Then share some page or article from whatever app to the _Save link_ app (you will fund it by its icon). If not done yet, configure the URL of the link blog instance and its password; if the URL is correct, you will see the blog contents below; both URL and password will be saved, so you will not have to enter them anymore. Redact the description and maybe the link itself and press the button _Post_.
+
+The blog replies either with a smiley `:-)` or an error message, and returns to the app afterwards.
+
+Even if not installed, the page can be used for link posting too. In this case, you will paste the link into the appropriate input element, and write the description then.
+
+# License
+
+[Apache 2.0](LICENSE)
