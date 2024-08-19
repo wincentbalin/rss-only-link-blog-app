@@ -20,5 +20,12 @@
     </form>
     <iframe id="blog"></iframe>
     <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        } else {
+            alert('Your platform is unsupported!');
+        }
+    </script>
 </body>
 </html>
