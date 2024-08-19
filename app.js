@@ -72,11 +72,11 @@ document.querySelector('form').addEventListener('submit', (event) => {
     }
 });
 
-addEventListener('unload', (event) => {
+window.addEventListener('unload', (event) => {
     // Trigger page reload at every access
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('load', (event) => {
     loadBlogUrlAndPassword();
     refreshBlog();
     if (searchParamsPresent) {
