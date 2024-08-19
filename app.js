@@ -34,19 +34,6 @@ function saveBlogUrlAndPasswordAfterSettingBlogUrl() {
     saveBlogUrlAndPassword();
 }
 
-function refreshBlog() {
-    var blog = document.querySelector('#blog');
-    var blogUrl = blog.src;
-    var blogUrlNotSet = blogUrl === document.location.href;
-
-    if (blogUrlNotSet) {
-        return;  
-    }
-
-    blog.src = "";
-    blog.src = blogUrl;
-}
-
 function loadShareTargetParams() {
     var params = new URLSearchParams(document.location.search);
     document.querySelector('#description').value = params.get('title') || '';
@@ -78,7 +65,6 @@ window.addEventListener('unload', (event) => {
 
 window.addEventListener('load', (event) => {
     loadBlogUrlAndPassword();
-    refreshBlog();
     if (searchParamsPresent) {
         loadShareTargetParams();
     }
