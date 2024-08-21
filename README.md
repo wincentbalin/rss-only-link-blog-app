@@ -12,6 +12,10 @@ The blog replies either with a smiley **:-)** or an error message, and returns t
 
 Even if not installed, the page can be used for link posting too. In this case, you will paste the link into the appropriate input element, and write the description then.
 
+# Security
+
+The app stores the blog password in the browser local storage **unencrypted**! Do not use it either on a device you do not trust! **You have been warned**.
+
 # License
 
 [Apache 2.0](LICENSE)
