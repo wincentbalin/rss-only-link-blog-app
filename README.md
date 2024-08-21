@@ -14,7 +14,7 @@ Even if not installed, the page can be used for link posting too. In this case, 
 
 # Security
 
-The app stores the blog password in the browser local storage **unencrypted**! Do not use it either on a device you do not trust! **You have been warned**.
+The app stores the blog password in the browser local storage **unencrypted**! Do not use it on a device you do not trust! **You have been warned**.
 
 # License
 
